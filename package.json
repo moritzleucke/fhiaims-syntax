@@ -1,0 +1,25 @@
+{
+  "name": "fhiaims-syntax",
+  "displayName": "FHIaims-Syntax",
+  "description": "Syntax highlighting for FHIaims source files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "fhiaims",
+      "aliases": ["FHIaims input file", "fhiaims"],
+      "extensions": [".in"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "fhiaims",
+      "scopeName": "source.aims",
+      "path": "./syntaxes/fhiaims.tmLanguage.json"
+    }]
+  }
+}

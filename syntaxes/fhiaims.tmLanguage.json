@@ -1,0 +1,80 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "FHIaims input file",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#booleans"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+                "name": "keyword.other.fhiaims",
+				"match": "^\\s*(?!xc|spin|qpe_calc|species|relativistic|override_illconditioning)\\b[a-zA-Z_][\\w]*\\b"
+			},{
+				"name": "keyword.control.fhiaims",
+				"match": "\\b(xc|spin|qpe_calc|species|relativistic|override_illconditioning)\\b"
+            }]
+		},
+		"strings": {
+			"name": "string.quoted.double.fhiaims",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.fhiaims",
+					"match": "\\\\."
+				}
+			]
+		},
+        "comments": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.fhiaims",
+					"match": "#.*$"
+				}
+			]
+		},
+        "numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.fhiaims",
+					"match": "\\b\\d+\\.?\\d*([eE][-+]?\\d+)?\\b"
+				}
+			]
+		},
+        "booleans": {
+			"patterns": [
+				{
+					"name": "entity.name.type.fhiaims",
+					"match": "\\.true\\."
+				},
+				{
+					"name": "entity.name.type.fhiaims",
+					"match": "\\.false\\."
+				},
+				{
+					"name": "entity.name.type.fhiaims",
+					"match": "\\btrue\\b"
+				},
+				{
+					"name": "entity.name.type.fhiaims",
+					"match": "\\bfalse\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.aims"
+}
