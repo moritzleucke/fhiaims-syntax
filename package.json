@@ -2,9 +2,15 @@
   "name": "fhiaims-syntax",
   "displayName": "FHIaims-Syntax",
   "description": "Syntax highlighting for FHIaims source files",
+  "icon": "images/aims_logo_128x128.png",
   "version": "0.0.1",
+  "publisher": "leumo",
   "engines": {
     "vscode": "^1.90.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/moritzleucke/fhiaims-syntax.git"
   },
   "categories": [
     "Programming Languages"
@@ -14,7 +20,11 @@
       "id": "fhiaims",
       "aliases": ["FHIaims input file", "fhiaims"],
       "extensions": [".in"],
-      "configuration": "./language-configuration.json"
+      "configuration": "./language-configuration.json",
+      "icon": {
+          "light": "./images/aims_logo.png",
+          "dark": "./images/aims_logo.png"
+        }
     }],
     "grammars": [{
       "language": "fhiaims",
